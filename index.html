@@ -4,108 +4,56 @@
  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {box-sizing: border-box;}
-
-body { 
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#navbar {
-  overflow-wrap: ;
-  background-color: #f1f1f1;
-  padding: 90px 10px;
-  transition: 0.4s;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 99;
-}
-
-#navbar a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
-  border-radius: 4px;
-}
-
-#navbar #logo {
-  font-size: 35px;
-  font-weight: bold;
-  transition: 0.4s;
-}
-
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-#navbar a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-
-#navbar-right {
-  float: right;
-}
-
-@media screen and (max-width: 580px) {
-  #navbar {
-    padding: 20px 10px !important;
-  }
-  #navbar a {
-    float: right;
-    display: block;
-    text-align: left;
-  }
-  #navbar-right {
-    float: none;
-  }
-}
+	.uzsiemimas {
+	
+		background-color: orange;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 12px;
+		padding: 7px;
+	}
+	pre {
+		background-color: white;
+		margin-left: 25px;
+		width: auto;
+	}
+	.data {
+		background-color: white;
+		float: right;
+		
+	}
 </style>
 </head>
 <body>
-
-<div id="navbar">
-  <a href="#default" id="logo">Užduotis</a>
-  <div id="navbar-right">
-    <a class="active" href="#home">HTML</a>
-    <a href="#contact">Css</a>
-    <a href="#about">Java</a>
-  </div>
-</div>
-
-<div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
-  
-  
-  <p><b>HTML aprašymas.</b></p>
-  
-  
-  <p>Css aprašymas</p>
-  
-  
-  
-  <p>Java aprašymas.</p>
-  
-  
-  <p><b>Užrašams:</b> ....</p>
-  
-  
-  <p>tekstas</p>
-</div>
-
-<script>
-
-</script>
-
+	<div class="uzsiemimas">
+		<div class="data">2019-04-25</div>
+		<h2>Įvadas į programavimą</h2>
+		 
+		 <!-- @TO_DO paveiksliukas klientas serveris programų struktūra -->
+		 <img src="klientas-serveris-programos.png" alt="klientas serveris programų struktūra">
+	</div>
+	<div class="uzsiemimas">
+		<div class="data">2019-04-26</div>
+		<h2>HTML pagrindai</h2>
+		 
+		 pasirašytas labas.html
+		 <pre>
+			&lt;!DOCTYPE html&gt;
+			&lt;html&gt;
+			&lt;head&gt;
+			 &lt;meta charset="UTF-8"&gt;	
+			&lt;/head&gt;
+			&lt;body&gt;
+				Labas HTML
+			&lt;/body&gt;
+			&lt;/html&gt;
+		 </pre>
+	</div>	
+	<footer>
+			<p>Patalpino: Deividas</p>
+			<p>Visos Teisės saugomos: <a href="mailto:someone@example.com">
+			someone@example.com</a>.</p>
+	</footer>
 </body>
-<footer>
-		<p>Patalpino: Deividas</p>
-		<p>Visos Teisės saugomos: <a href="mailto:someone@example.com">
-		someone@example.com</a>.</p>
-</footer>
 </html>
