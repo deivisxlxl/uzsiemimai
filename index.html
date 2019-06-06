@@ -4,6 +4,39 @@
  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: none;
+  background-color: #af8849;
+}
+
+li {
+  float: left;
+  border-right:10px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 24px 86px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #af8849;
+}
+
+.active {
+  background-color: #af8849;
+
+}
 	.uzsiemimas {
 	
 		background-color: orange;
@@ -15,12 +48,12 @@
 		border: 1px solid black;
 	}
 	pre {
-		background-color: white;
+		background-color: orange;
 		margin-left: 25px;
 		width: auto;
 	}
 	.data {
-		background-color: white;
+		background-color: orange;
 		float: right;
 		
 	}
@@ -29,19 +62,64 @@
 	margin: 200px;
 	padding:10px;
 	margin-left:auto;
-	border:20px solid #ffd699;
+	border:20px solid #af8849;
 	
 	
 	}
 	.font-family:{
 	font-style: "Times New Roman"
 	}
-	
+	$primary-light-blue: #8DB9ED;
+$primary-line-color: #ccc;
+* {
+  box-sizing: border-box
+}
+html, body {
+  height: 100%
+}
+body {
+	font: 11px "Open Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  //This justify-content is essentially unnecessary in Firefox and Chrome due to the flex: 1 1 auto on the main.  However, it's needed to push the footer down on IE11
+  justify-content: space-between
+}
+ul {
+  list-style: none
+}
+a {
+  text-decoration: none
+}
+.generic-anchor {
+	color: $primary-light-blue;
+	&:visited {
+		color: $primary-light-blue
+	}
+	&:hover {
+		color: $primary-line-color
+	}
+}
+.flex-rw {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+ 
 	
 	
 </style>
 </head>
 <body>
+	<ul>
+  <li><a class="active" href="#home">HTML</a></li>
+  <li><a href="#news">CSS</a></li>
+  <li><a href="#contact">Javascript</a></li>
+  <li><a href="#about">Testas</a></li>
+</ul>
 	<div class="uzsiemimas">
 		<div class="data">2019-04-25</div>
 		<h2>Įvadas į programavimą</h2>
@@ -76,8 +154,13 @@
 	</div>	
 	<footer>
 			<p>Patalpino: Deividas</p>
-			<p>Visos Teisės saugomos: <a href="mailto:someone@example.com">
+			<p>Visos Teisės saugomos: <a href="mailto:vardenis@pavardenis.lt">
 			someone@example.com</a>.</p>
+			
+    <div class="footer-bottom-wrapper">
+    <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Komanda</a> | <a href="/komanda.html" class="generic-anchor" rel="nofollow">Privatumas</a>
+      </div>
+  </section>
 	</footer>
 </body>
 </html>
