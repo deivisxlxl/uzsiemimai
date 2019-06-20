@@ -15,8 +15,48 @@
 			  margin: 0;
 			  padding: 0;
 			  overflow: none;
-			  background-color: #af8849;
-		}
+			  background-color: rgba(196, 65, 39, 0.31);
+		
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+}
 	*/
 		li {
 			  float: left;
@@ -32,17 +72,17 @@
 			  text-align: center;
 			  padding: 20px 70px;
 			  text-decoration: none;
-			  background-color: #af8849;
+			  background-color: rgba(196, 65, 39, 0.72);
 		}
 		li a:hover:not(.active) {
 			background-color: #af8849;
 		}
 		.active {
-			background-color: #af8849;
+			background-color: rgba(196, 65, 39, 0.72);
 		}
 		.uzsiemimas {
 		
-			background-color: orange;
+			background-color: rgba(245, 159, 0, 0.41);
 			width: 90%;
 			margin-left: auto;
 			margin-right: auto;
@@ -85,7 +125,7 @@
 			margin: auto;
 			display: float;
 			flex-flow: column nowrap;
-			background-color: #ffdd99;
+			background-color: #dc6e4c;
 		}
 		ul {
 			margin-right: 200px;
@@ -108,46 +148,102 @@
 			  flex-flow: row wrap;
 		}
 		footer {
-			background-color: #af8849;
+			background-color: rgba(220, 83, 76, 0.67);
 		}
 	</style>
 </head>
 <body>
+<body background="22.jpg">
 	<img src="logo.png" style="float:left;" alt="logo" />
 	<h1>Užsiemimai</h1>
 	<ul>
-		  <li><a class="html" href="#home">HTML</a></li>
-		  <li><a href="#css">CSS</a></li>
-		  <li><a href="#javascript">Javascript</a></li>
+		  <li><a href="index.html">HTML</a></li>
+		  <li><a class="active" href="css.html">CSS</a></li> 
+		  <li><a href="javascript.html">Javascript</a></li>
 		  <li><a href="#about">Testas</a></li>
 		  <li><a href="#about">Pavyzdys</a></li>
+		  <button class="dropbtn">Dropdown</button>
+			<li><a href="#">Link 1</a></li>
+				<a href="#">Link 2</a>
+				<a href="#">Link 3</a>
 	</ul>
+	<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
 	<div class="uzsiemimas" style="clear: left; margin-top: 0px">
 		<div class="data">2019-04-25</div>
-		<h2>CSS pagrindai</h2>
-		 <h3> CSS pagrindai - kalba, skirta nusakyti kita struktūrine kalba aprašyto dokumento vaizdavimą. Dažniausiai CSS aprašomas HTML dokumentų pateikimas, tačiau ją galima taikyti ir įvairiems kitomis kalbomis parašytiems dokumentams (pvz., XML paremtiems SVG ir XUL). </h3>
+		<h2>Įvadas į programavimą</h2>
+		 <h3> CSS -  kalba, skirta nusakyti kita struktūrine kalba aprašyto dokumento vaizdavimą. Dažniausiai CSS aprašomas HTML dokumentų pateikimas, tačiau ją galima taikyti ir įvairiems kitomis kalbomis parašytiems dokumentams (pvz., XML paremtiems SVG ir XUL). </h3>
+		 Identifikatorius
+CSS identifikatorium gali būti bet kuris HTML elementas, taip pat identifikatoriumi gali būt apibrėžta klasė. Pavyzdžiui,
+
+p {text-align: center;} aprašo stilių HTML pastraipos elementui p (<p>). Stilius gali būti sudaromas aprašant keletą savybių (atskirtų kabliataškiu):
+ p {text-align:center; color:red;}
+Internetinio puslapio pastraipų tekstas bus centruotas, raudonas.
+
+Klasės (class) atributas
+HTML elementui galima priskirti klasės atributą, o tai leidžia tam pačiam elemetui turėti skirtingus stilius. Pavyzdžiui, norima, kad dvi pastraipos būtų skirtingai lygiuojamos:
+
+p.desineje {text-align: right;}
+p.centruoti {text-align: center;}
+HTML dokumente norimos pastraipos aprašomos taip:
+
+<p class="desineje">Ši pastraipa bus lygiuota dešinėje.</p>
+ir
+
+<p class="centruoti">Ši pastraipa bus centruota.</p>
+Elementui galima priskirti keletą klasių vienu metu, tačiau persidengiantys stiliai bus perrašyti:
+
+<p class="desineje kitaklase">Pastraipa su dviem klasėm.</p>
+Labai patogu, kai klasės pavadinamos pagal tai, kokį stilių jos suteikia. Iš užrašo p class="desineje" galima suprasti, kad pastraipa bus lygiuojama prie dešinės paraštės.
+
+ID atributas
+Galima aprašyti stilių pagal elemento identifikatorių:
+
+#identifikatorius {text-align: right;}
+Tada tik elementui su tuo identifikatorium bus taikomas aprašytas stilius:
+
+<p id="identifikatorius">Ši pastraipa bus lygiuota dešinėje.</p>
 		<!-- @TO_DO paveiksliukas klientas serveris programų struktūra -->
+		 
+		 
 		 <img src="11.png" alt="Css">
 		 
-	</div>
 	
+	</div>
+
+
+	<div class="uzsiemimas">
+		<div class="data">2019-04-26</div>
+		<h2>HTML pagrindai</h2>
 		 
-		pavyzdys stiliaus paveikslelio css
+		 pasirašytas labas.html
 		 <pre>
-			
-			&lt;img&gt;{
-			&lt;width: 200px;&gt;
-			&lt;margin: 200px;&gt;
-			&lt;padding:10px;&gt;
-			&lt;margin-left:initial;&gt;
-			&lt;border:20px solid #af8849;&gt;
-		}
+			&lt;!DOCTYPE html&gt;
+			&lt;html&gt;
+			&lt;head&gt;
+			 &lt;meta charset="UTF-8"&gt;	
+			&lt;/head&gt;
+			&lt;body&gt;
+				Labas HTML
+			&lt;/body&gt;
+			&lt;/html&gt;
 		 </pre>
 	</div>	
-	
+	<div class="uzsiemimas">
+		<div class="data">2019-04-27</div>
+		<h2>CSS pagrindai</h2>
+	</div>
 	<a name="javascript"></a>
 	<div class="uzsiemimas">
-		
+		<div class="data">2019-04-27</div>
+		<h2>JavaScript pagrindai</h2>
+	</div>	
 	<footer>
 	    <div class="footer-bottom-wrapper">
 				<pre> <p>Patalpino: Deividas</p> </pre>

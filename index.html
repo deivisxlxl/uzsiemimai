@@ -16,7 +16,47 @@
 			  padding: 0;
 			  overflow: none;
 			  background-color: rgba(196, 65, 39, 0.31);
-		}
+		
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+}
 	*/
 		li {
 			  float: left;
@@ -109,7 +149,8 @@
 		}
 		footer {
 			background-color: rgba(220, 83, 76, 0.67);
-		}
+	
+
 	</style>
 </head>
 <body>
@@ -117,16 +158,34 @@
 	<img src="logo.png" style="float:left;" alt="logo" />
 	<h1>Užsiemimai</h1>
 	<ul>
-		  <li><a class="active" href="#home">HTML</a></li>
-		  <li><a href="#news">CSS</a></li>
-		  <li><a href="#javascript">Javascript</a></li>
+ 
+		  <li><a class="active" href=".indexhtml">HTML</a></li>
+		  <li><a href="css.html">CSS</a></li> 
+		  <li><a href="javascript.html">Javascript</a></li>
 		  <li><a href="#about">Testas</a></li>
 		  <li><a href="#about">Pavyzdys</a></li>
+		  <button class="dropbtn">Dropdown</button>
+			<li><a href="#">Link 1</a></li>
+				<a href="#">Link 2</a>
+				<a href="#">Link 3</a>
 	</ul>
+	<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
 	<div class="uzsiemimas" style="clear: left; margin-top: 0px">
 		<div class="data">2019-04-25</div>
 		<h2>Įvadas į programavimą</h2>
-		 <h3> HTML - tai kompiuterine žymejimo kalba, naudojama pateikti turini internete. </h3>
+		 <h3> HTML - tai kompiuterine žymejimo kalba, naudojama pateikti turini internete.
+agrindinis HTML kalbos vienetas yra elementas. Kaip ir XML, HTML elementas turi vardą ir gali turėti bet kokį skaičių atributų. Elemento viduje gali būti tekstas bei kiti elementai. Tiek tekstas, tiek ir dukteriniai elementai paprastai gali kartotis ir sekti bet kuria tvarka.
+
+Elemento atributai turi vardą ir reikšmę. Jei galimi atributai nenurodomi, paprastai galioja sutartos nutylėjimo taisyklės. Pavyzdžiui, HTML fragmentas <font color="red"><b>r</b> raudona</font> turi du elementus. Vienas jų (font) perjungia rodomo teksto spalvą į raudoną. Šio elemento viduje esantis antrasis elementas (b), perjungia šriftą į paryškintą. Pirmasis elementas turi vieną atributą (color) su reikšme red. Antrasis elementas atributų neturi.
+
+
 		<!-- @TO_DO paveiksliukas klientas serveris programų struktūra -->
 		 <img src="10.png" alt="HTML">
 		 
@@ -134,6 +193,8 @@
 		 
 		 <img src="12.png" alt="Javascript">
 	</div>
+
+
 	<div class="uzsiemimas">
 		<div class="data">2019-04-26</div>
 		<h2>HTML pagrindai</h2>
