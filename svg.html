@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="UTF-8">
+	<meta name="viewport" content="width=center-side, initial-scale=1">
+	<link rel="icon" type="image/png" sizes="16x16" href="icon-36x36.png">
+
+
+	<style>
+		header img {
+			float:left
+			left:50px
+			top:20px
+		}
+	/*	
+		nav {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: none;
+			  background-color: rgba(196, 65, 39, 0.31);
+		
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+}
+	*/
+		li {
+			  float: left;
+			  border-right:10px solid #bbb;
+			  width: 200px;
+		}
+		li:last-child {
+			border-right: none;
+		}
+		li a {
+			  display: block;
+			  color: white;
+			  text-align: center;
+			  padding: 20px 70px;
+			  text-decoration: none;
+			  background-color: rgba(196, 65, 39, 0.72);
+		}
+		li a:hover:not(.active) {
+			background-color: #af8849;
+		}
+		.active {
+			background-color: rgba(196, 65, 39, 0.72);
+		}
+		.uzsiemimas {
+		
+			background-color: rgba(245, 159, 0, 0.41);
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 12px;
+			padding: 7px;
+			border: 1px solid black;
+		}
+		pre {
+			background-color: orange;
+			margin-left: 25px;
+			width: auto;
+		}
+		.data {
+			background-color: orange;
+			float: right;
+			
+		}
+		img {
+			width: 200px;
+			margin: 200px;
+			padding:10px;
+			margin-left:initial;
+			border:20px solid #af8849;
+		}
+		/* .font-family:{
+			font-style: "Times New Roman"
+		} */
+		$primary-light-blue: #8DB9ED;
+		$primary-line-color: #ccc;
+		* {
+			box-sizing: border-box
+		}
+		html, body {
+			height: 100%
+		}
+		body {
+			font: 11px "Open Sans", sans-serif;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			margin: auto;
+			display: float;
+			flex-flow: column nowrap;
+			background-color: #dc6e4c;
+		}
+		ul {
+			margin-right: 200px;
+			list-style: none
+		}
+		a {
+			text-decoration: none
+		}
+		.generic-anchor {
+			color: $primary-light-blue;
+			&:visited {
+				color: $primary-light-blue
+			}
+			&:hover {
+				color: $primary-line-color
+			}
+		}
+		.flex-rw {
+			  display: flex;
+			  flex-flow: row wrap;
+		}
+		footer {
+			background-color: rgba(220, 83, 76, 0.67);
+		}
+	</style>
+</head>
+<body>
+<body background="22.jpg">
+	<img src="logo.png" style="float:left;" alt="logo" />
+	<h1>Užsiemimai</h1>
+	<ul>
+		  <li><a href="index.html">HTML</a></li>
+		  <li><a href="css.html">CSS</a></li> 
+		  <li><a href="javascript.html">Javascript</a></li>
+		  <li><a href="#about">Testas</a></li>
+		  <li><a class="active" href="#about">SVG</a></li>
+		  <button class="dropbtn">Dropdown</button>
+			<li><a href="#">Link 1</a></li>
+				<a href="#">Link 2</a>
+				<a href="#">Link 3</a>
+	</ul>
+	<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
+	<div class="uzsiemimas" style="clear: left; margin-top: 0px">
+		<div class="data">2019-04-25</div>
+		<h2>Įvadas į programavimą</h2>
+		 <h3> JavaScript – objektiškai orientuota skriptų programavimo kalba, besiremianti prototipų principu. Dažniausiai kalba naudojama internetinių puslapių interaktyvumo realizacijai, bet taip pat naudojama ir kaip galimybė skriptais manipuliuoti tam tikromis programomis. Kalba sukurta Brendano Eicho Netscape kompanijoje ir pavadinta Mocha, vėliau pervadinta į LiveScript, ir galiausiai tapo JavaScript. Vienas iš argumentų pervadinant kalbą buvo sintaksinis panašumas su Java kalba. Paskutinė JavaScript versija – 1.8. </h3>
+		<!-- @TO_DO paveiksliukas klientas serveris programų struktūra -->
+		Naudojimas
+JavaScript kalbos sintaksė perimta iš C kalbos, su kitais komponentais bendraujama per interfeisus (dokumento objektinį modelį), palaikoma Unicode, reguliarios išraiškos (regular expresions), taip pat teksto vykdymas naudojant eval funkciją.
+
+Paprastai JavaScript kalbos kodas įtraukiamas į HTML puslapius, tokiu būdu išplečiant statinius HTML puslapius dinaminiu skripto funkcionalumu – galimas anketų parametrų tikrinimas, naujų langų atidarymas, suskleidžiamos hierarchinės struktūros rodymas, išsiskleidžiantis meniu ir daug kitų interaktyvumo formų.
+
+JavaScript kalba remiasi kelios pagrindinės svetainių kūrimo metodologijos – DHTML (Dinaminis HTML), AJAX, SPA.
+
+Taip pat JavaScript naudojamas įvairiuose įrankiuose – pavyzdžiui, Adobe Acrobat ir Adobe Reader programos leidžia naudoti skriptus PDF faile.
+		 
+		 <img src="12.png" alt="Javascript">
+	
+	</div>
+	<svg width="300" height="300">
+  <polygon points="50,0 40,398 120,78 10,78 160,528"
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+Sorry, your browser does not support inline SVG.
+</svg>
+	<svg viewBox="0 10 1000 600"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="MyPath" d="M 10 30 Q 260 100 400 100" />
+  </defs>
+  <use xlink:href="#MyPath" fill="none" stroke="#59fa81" />
+  <text font-family="Courier New" font-size="42.5">
+    <textPath xlink:href="#MyPath">
+    Tai yra SVG 
+    </textPath>
+  </text>
+</svg>
+
+
+	<div class="uzsiemimas">
+		<div class="data">2019-04-26</div>
+		<h2>HTML pagrindai</h2>
+		 
+		 pasirašytas labas.html
+		 <pre>
+			&lt;!DOCTYPE html&gt;
+			&lt;html&gt;
+			&lt;head&gt;
+			 &lt;meta charset="UTF-8"&gt;	
+			&lt;/head&gt;
+			&lt;body&gt;
+				Labas HTML
+			&lt;/body&gt;
+			&lt;/html&gt;
+		 </pre>
+	</div>	
+	<div class="uzsiemimas">
+		<div class="data">2019-04-27</div>
+		<h2>CSS pagrindai</h2>
+	</div>
+	<a name="javascript"></a>
+	<div class="uzsiemimas">
+		<div class="data">2019-04-27</div>
+		<h2>JavaScript pagrindai</h2>
+	</div>	
+	<footer>
+	    <div class="footer-bottom-wrapper">
+				<pre> <p>Patalpino: Deividas</p> </pre>
+				<p>Visos Teisės saugomos: <a href="mailto:vardenis@pavardenis.lt">
+				someone@example.com</a>.</p> 
+		<a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Komanda</a> | <a href="/komanda.html" class="generic-anchor" rel="nofollow">Privatumas</a>
+	    </div>
+	</footer>
+</body>
+</html>
